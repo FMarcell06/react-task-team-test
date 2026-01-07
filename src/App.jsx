@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      Csapat projekt
+      <h1>Új feladat hozzáadása</h1>
       <AddTask/>
     </>
   )
