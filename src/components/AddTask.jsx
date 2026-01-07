@@ -3,7 +3,7 @@ import React from 'react'
 export const AddTask = () => {
   return (
     <div>
-      <h2>asd</h2>
+      <h2>asdxd</h2>
     </div>
   )
 }
