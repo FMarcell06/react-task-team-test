@@ -3,7 +3,7 @@ import React from 'react'
 export const AddTask = () => {
   return (
     <div>
-      <h2>infinity pepee</h2>
+      <h2>xddddddd</h2>
     </div>
   )
 }
