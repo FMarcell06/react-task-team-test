@@ -1,9 +1,26 @@
 import React from 'react'
 
-export const AddTask = () => {
+export const AddTask = ({setTask}) => {
+  const [text, setText] = useState('');
+  const [assignedTo, setAssignedTo] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if(!text || !assignedTo) return;
+    const newTask = {id:Date.now(), text, assignedTo}
+    setTask(prev=>[...prev, newTask]);
+    setText('');
+    setAssignedTo('');
+    }
+  
   return (
     <div>
-      <h2>infinity pepee</h2>
+      <h3>Új teendő hozzáadása</h3>
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder='Új task...' value={text} onChange={(e)=>setText()} />
+        <input type="text place"  placeholder='Fejlesztő neve' value={assignedTo} onChange={(e)=>setAssignedTo(e.target.value)}/>
+        <button type='submit'>Hozzáadás</button>
+      </form>
     </div>
   )
 }
