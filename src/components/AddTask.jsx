@@ -17,7 +17,7 @@ export const AddTask = ({setTask}) => {
     <div>
       <h3>Új teendő hozzáadása</h3>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder='Új task...' value={text} onChange={(e)=>setText()} />
+        <input type="text" placeholder='Új task...' value={text} onChange={(e)=>setText(e.target.value)} />
         <input type="text place"  placeholder='Fejlesztő neve' value={assignedTo} onChange={(e)=>setAssignedTo(e.target.value)}/>
         <button type='submit'>Hozzáadás</button>
       </form>
